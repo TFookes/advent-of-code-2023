@@ -12,7 +12,7 @@ OUTPUT="$DAYSTR/inputs.txt"
 echo "Writing to file: $OUTPUT"
 
 URL="https://adventofcode.com/2022/day/$DAY/input"
-SESSION="53616c7465645f5f8b15ae3fe7a237e9ed28a394c4e12a0143db49dc9c0a4d8bf7d87347900866c77a2dd4be0bcb1b559179328dcf4f72088f5569694cb4b927"
+SESSION="53616c7465645f5f64fc9a22be9a03346c322067a0dabe45ca85772a051be5c44a79b8a03285274fe0fea233ed1680c578afa8ac260165f033a4a5caca55b5067"
 
 curl --location --request GET "$URL" --header "Cookie: session=$SESSION" -o "$OUTPUT"
 echo "Happy Solving :)"
