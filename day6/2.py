@@ -28,7 +28,7 @@ def find_min(min_time, max_time):
 def find_max(min_time, max_time):
     global global_min
     global global_max
-    
+
     if min_time == max_time or abs(min_time - max_time) == 1: 
         if compute_distance(max_time) > dist: global_max = max_time
         else: global_max = min_time
@@ -41,6 +41,7 @@ def find_max(min_time, max_time):
 
 
 def find_start(min_time, max_time):
+    print(min_time, max_time)
     if compute_distance(math.floor(max_time - min_time / 2)) > dist:
         find_max(min_time + math.floor(max_time - min_time / 2), total_time)
         find_min(0, min_time + math.floor(max_time - min_time / 2))
@@ -79,6 +80,3 @@ if __name__ == "__main__":
     find_start(0, total_time) 
     print("Min", global_min, "Max", global_max)
     print(global_max - global_min + 1)
-    #print(math.floor((total_time - 0) / 2))
-    #print(compute_distance(math.floor((total_time - 0) / 2)))
-    #print(compute_distance(math.floor((total_time - 0) / 2)) > 0)

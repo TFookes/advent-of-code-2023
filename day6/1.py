@@ -1,6 +1,6 @@
 import math
 
-def compute_diatnce(wind_up, total_time):
+def compute_distance(wind_up, total_time):
     return wind_up * (total_time - wind_up)
 
 
@@ -32,7 +32,7 @@ if __name__ == "__main__":
     for race in races:    
         wins = 0
         for i in range(0, race):
-            if compute_diatnce(i, race,) > races[race]: wins += 1
+            if compute_distance(i, race,) > races[race]: wins += 1
     
         perms_that_win += [wins]
         print(perms_that_win)
