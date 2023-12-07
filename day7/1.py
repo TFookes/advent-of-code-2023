@@ -63,7 +63,7 @@ def determine_type(hand):
 def order_rank(hand):
     value = 0
     for i, card in enumerate(hand):
-        value += (card_ranks[card]) * math.pow(10, 5 - i - i)
+        value += (card_ranks[card]) * math.pow(10, 10 - (i *2))
 
     return value
 
